@@ -6,4 +6,16 @@
     psvm
     
 # SpringBoot项目git ignore target等目录
-    [https://www.renyiwei.com/archives/1590.html](https://www.renyiwei.com/archives/1590.html)
+  [https://www.renyiwei.com/archives/1590.html](https://www.renyiwei.com/archives/1590.html)
+    
+    
+# git add时候出现下列warning是为什么？
+    E:\springboot>git add .
+    warning: LF will be replaced by CRLF in pom.xml.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in springboot.iml.
+    The file will have its original line endings in your working directory
+
+
+
+

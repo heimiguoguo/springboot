@@ -1,0 +1,36 @@
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: utf-8
+
+#MySQL
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8
+    username: root
+    password:
+
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+    static-path-pattern: /static/**
+
+  devtools:
+    restart:
+      # 设置热部署生效
+      enabled: true
+      # 设置重启的目录
+      additional-paths: src/main/java
+      # WEB-INF目录下内容发生更改不重启
+      exclude: WEB-INF/*
+

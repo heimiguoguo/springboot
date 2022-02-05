@@ -1,9 +1,10 @@
 package com.mapgis.service;
 
-import com.mapgis.dao.UserRepositoty;
+import com.mapgis.dao.UserRepository;
 import com.mapgis.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 /**
  * Created by Song on 2017/2/15.
@@ -11,14 +12,16 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserService {
-    @Autowired
-    private UserRepositoty userRepositoty;
+    @Resource
+    private UserRepository userRepository;
 
     public User findUserByName(String name){
         User user = null;
         try{
-            user = userRepositoty.findByUserName(name);
-        }catch (Exception e){}
+            user = userRepository.findByUserName(name);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return user;
     }
 }
